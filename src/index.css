@@ -1,13 +1,88 @@
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 97vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('./images/harrypotter.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h1{
+  color: #2e5375;
+}
+
+.malla {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.columnaIzquierda {
+  display: flex;
+  justify-content: right;
+  text-align: right;
+  padding: 10px;
+}
+
+.columnaDerecha {
+  display: flex;
+  justify-content: left;
+  text-align: left;
+  padding: 10px;
+}
+
+.contenedor {
+  background-color: white;
+  text-align: center;
+  box-shadow: 10px 10px 10px rgb(87, 83, 83);
+  padding: 30px;
+  border-radius: 5px;
+  width: 50vw;
+  max-height: 65vh;
+  overflow-y: auto;
+}
+
+.button {
+  background-color: #2e5375;
+  padding: 10px;
+  border-radius: 5px;
+  border-color: #133751;
+  color: white;
+  font-weight: 600;
+  font-size: 17px;
+  width: 50%;
+  transition: 0.3s;
+}
+
+.button:hover{
+  background-color: #133751;
+    color: white;
+    width: 60%;
+}
+
+.input {
+  padding: 5px;
+  border-width: 0px 0px 2px 0px;
+  border-color: black;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input:hover{
+  border-color: #2e5375;
+}
+
+
