@@ -5,6 +5,7 @@ import GeneralContext from "../context/GeneralContext"
 import ButtonLink from "../components/ButtonLink"
 import Button from "../components/Button"
 import { useLocation, useNavigate } from 'react-router-dom';
+import {fetchBody} from '../utils/fetch'
 
 function Login() {
     const {changeName, changePassword, changeHeader, changeHeaderAnimation, name, password} = useContext (GeneralContext)
@@ -22,11 +23,23 @@ function Login() {
         changeHeaderAnimation(true);
     }, [])
 
-    function validate() {
+    async function validate() {
         if (name == "" || password == ""){
             alert("Por favor, llena todos los campos.");
         } else {
-            navigate('/principal');
+            const data = {
+                usuario: name,
+                password: password
+            }
+            const respuesta = await fetchBody ('/','POST',data) 
+            if (respuesta.exito){
+                navigate('/principal');
+            }
+            else {
+                alert('Usuario o Contraseña incorrecto')
+            }
+            
+
         }
     }
 
