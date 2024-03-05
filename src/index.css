@@ -11,8 +11,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url('./images/harrypotter.webp');
+  background-image: url('./images/harrypotterwallpaper.jpg');
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
@@ -30,10 +31,20 @@ h1{
   grid-template-columns: 50% 50%;
 }
 
+.malla3Columnas {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  justify-content: right;
+  text-align: right;
+  align-items: center;
+  height: 7vh;
+}
+
 .columnaIzquierda {
   display: flex;
   justify-content: right;
   text-align: right;
+  align-items: center;
   padding: 10px;
 }
 
@@ -41,11 +52,33 @@ h1{
   display: flex;
   justify-content: left;
   text-align: left;
+  align-items: center;
   padding: 10px;
 }
 
+.columnaCentral {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.columnaIzquierdaMenu {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.columnaDerechaMenu {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
 .contenedor {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
   box-shadow: 10px 10px 10px rgb(87, 83, 83);
   padding: 30px;
@@ -83,6 +116,38 @@ h1{
 
 .input:hover{
   border-color: #2e5375;
+}
+
+.menuHeader{
+  background-color: #2e5375;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  text-align: center;
+  align-items: center;
+  height: 8vh;
+  z-index: 2;
+  padding: 10px;
+}
+
+.menuButton {
+  background-color: rgba(0,0,0,0);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.menuButton:hover {
+  background-color: white;
+  color: #133751;
+  font-size: 17px;
+  font-weight: bold;
+  border-radius: 10px;
 }
 
 
